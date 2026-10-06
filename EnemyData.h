@@ -13,4 +13,6 @@ struct EnemyData
 
     int maxHp;
     int attack;
+    int gold;
+    int exp;
 };

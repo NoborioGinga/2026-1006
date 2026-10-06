@@ -7,6 +7,8 @@ Enemy::Enemy()
     hp = 0;
     maxHp = 0;
     attack = 0;
+    gold = 0;
+    exp = 0;
     active = false;
 }
 
@@ -16,7 +18,8 @@ void Enemy::Initialize(const EnemyData& data)
     maxHp = data.maxHp;
     hp = maxHp;
     attack = data.attack;
-
+    exp = data.exp;
+    gold = data.gold;
     active = true;
 }
 
@@ -38,6 +41,8 @@ void Enemy::Reset()
     hp = 0;
     maxHp = 0;
     attack = 0;
+    gold = 0;
+    exp = 0;
 
     active = false;
 }
@@ -70,4 +75,15 @@ int Enemy::GetMaxHP() const
 int Enemy::GetAttack() const
 {
     return attack;
+}
+
+int Enemy::GetExp()const
+{
+    return exp;
+}
+
+int Enemy::GetGold()const
+{
+    return gold;
+
 }

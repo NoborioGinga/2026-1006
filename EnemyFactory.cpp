@@ -12,7 +12,9 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         {
             "スライム",
             30,
-            8
+            8,
+            50,
+            25
         };
 
         break;
@@ -23,7 +25,9 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         {
             "ゴブリン",
             50,
-            12
+            12,
+            70,
+            50
         };
 
         break;
@@ -34,7 +38,9 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         {
             "ドラゴン",
             100,
-            20
+            20,
+            150,
+            100
         };
 
         break;

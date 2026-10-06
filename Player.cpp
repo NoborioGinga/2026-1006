@@ -7,6 +7,8 @@ Player::Player()
     maxHp = 100;
     hp = maxHp;
     attack = 20;
+    exp = 0;
+    gold = 0;
 }
 
 void Player::Attack()
@@ -52,4 +54,15 @@ int Player::GetMaxHP() const
 int Player::GetAttack() const
 {
     return attack;
+}
+
+int Player::GetExp()const
+{
+    return exp;
+}
+
+int Player::GetGold()const
+{
+    return gold;
+
 }

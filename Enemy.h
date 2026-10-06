@@ -27,12 +27,19 @@ public:
 
     int GetAttack() const;
 
+    int GetGold()const;
+
+    int GetExp()const;
+
 private:
     const char* name;
 
     int hp;
     int maxHp;
     int attack;
+
+    int exp;
+    int gold;
 
     bool active;
 };
