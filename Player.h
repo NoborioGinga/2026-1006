@@ -4,6 +4,7 @@ class Player
 {
 public:
     Player();
+    
 
     void Attack();
 
@@ -22,6 +23,9 @@ public:
     int GetAttack() const;
     int GetExp() const;
     int GetGold() const;
+	//レベルアップ機能を追加
+	int GetLevel() const;
+    int GetNextLevelExp() const;
 
 private:
     int hp;
@@ -29,4 +33,6 @@ private:
     int attack;
     int exp;
     int gold;
+    int level;
+    int nextLevelExp;
 };

@@ -130,12 +130,23 @@ void Game::Battle()
         << " / " << map.enemyCount << std::endl;
 
     std::cout << std::endl;
+
+    std::cout << "プレイヤー レベル : "
+		<< player.GetLevel() << std::endl;
+
     std::cout << "プレイヤー HP : "
         << player.GetHP() << " / "
         << player.GetMaxHP() << std::endl;
 
-    std::cout << "EXP : " << player.GetExp() << std::endl;
-    std::cout << "ゴールド : " << player.GetGold() << std::endl;
+	std::cout << "攻撃力 : " 
+        << player.GetAttack() << std::endl;
+
+    std::cout << "EXP : "
+		<< player.GetExp() << " / "
+		<< player.GetNextLevelExp() << std::endl;
+
+    std::cout << "ゴールド : "
+        << player.GetGold() << std::endl;
 
     std::cout << std::endl;
     std::cout << currentEnemy->GetName()
@@ -256,6 +267,8 @@ void Game::MapClear()
         << " 体倒しました！" << std::endl;
     std::cout << "現在のEXP：" << player.GetExp() << std::endl;
     std::cout << "所持ゴールド：" << player.GetGold() << std::endl;
+    std::cout << "\nマップクリア報酬！" << std::endl;
+    player.AddExp(150);
     std::cout << "==============================" << std::endl;
 
     // 最終マップか確認
