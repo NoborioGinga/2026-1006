@@ -11,6 +11,10 @@ public:
 
     void Heal(int amount);
 
+	void AddExp(int amount);
+
+	void AddGold(int amount);
+
     bool IsDead() const;
 
     int GetHP() const;

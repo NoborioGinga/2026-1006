@@ -36,6 +36,17 @@ void Player::Heal(int amount)
     }
 }
 
+
+void Player::AddExp(int amount)
+{
+    exp += amount;
+}
+ 
+void Player::AddGold(int amount)
+{
+    gold += amount;
+}
+
 bool Player::IsDead() const
 {
     return hp <= 0;

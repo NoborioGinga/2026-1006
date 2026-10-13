@@ -44,6 +44,18 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         };
 
         break;
+
+    default: data =
+    {
+        "ƒXƒ‰ƒCƒ€",
+        30,
+        8,
+        50,
+        25
+    };
+
+
+        break;
     }
 
     enemy.Initialize(data);

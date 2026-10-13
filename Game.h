@@ -1,38 +1,32 @@
+
 #pragma once
 
-#include "GameState.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "ObjectPool.h"
 
 class Game
 {
-public:
-    Game();
-
-    void Run();
-
 private:
-    void Update();
+    bool running = true;
 
-    void Draw();
-
-    void Title();
-
-    void Battle();
-
-    void Victory();
-
-    void GameOver();
-
-    void CreateNextEnemy();
-
-private:
     Player player;
-
     ObjectPool enemyPool;
-
     Enemy* currentEnemy;
 
-    bool running;
+    int currentMap = 0;
+    int defeatedOnMap = 0;
+
+    void Title();
+    void Battle();
+    void MapClear();
+    void Victory();
+    void GameOver();
+    void CreateNextEnemy();
+
+public:
+    Game();
+    void Run();
+    void Update();
+    void Draw();
 };
