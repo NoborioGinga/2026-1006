@@ -84,6 +84,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
             150,
             100
 		};
+        		break;
 
     default: data =
     {

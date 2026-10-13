@@ -429,7 +429,7 @@ void Game::CreateNextEnemy()
     // 0`5‚Ì’†‚©‚çƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ô
     int index = std::rand() % 6;
 
-    EnemyType enemyType = map.enemyTypes[index];
+    EnemyType enemyType = enemyTypes[index];
 
     EnemyFactory::CreateEnemy(*currentEnemy, enemyType);
 }

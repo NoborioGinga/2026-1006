@@ -5,7 +5,7 @@
 class ObjectPool
 {
 public:
-    static const int POOL_SIZE = 3;
+    static const int POOL_SIZE = 6;
 
     ObjectPool();
 
