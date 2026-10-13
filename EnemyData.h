@@ -2,9 +2,12 @@
 
 enum class EnemyType
 {
-    Slime,
-    Goblin,
-    Dragon
+	Slime,  // スライム
+    Goblin, // ゴブリン
+    Golem,  // ゴーレム
+    Skeleton, // スケルトン
+	Witch,   // 魔女     
+    Dragon, // ドラゴン
 };
 
 struct EnemyData

@@ -415,8 +415,19 @@ void Game::CreateNextEnemy()
     }
 
     // 現在のマップで設定された敵からランダムに選択
-    int index = std::rand()
-        % static_cast<int>(map.enemyTypes.size());
+  // 出現する敵6種類
+    const EnemyType enemyTypes[] =
+    {
+        EnemyType::Slime,
+        EnemyType::Goblin,
+        EnemyType::Golem,
+        EnemyType::Skeleton,
+        EnemyType::Witch,
+        EnemyType::Dragon
+    };
+
+    // 0～5の中からランダムに選ぶ
+    int index = std::rand() % 6;
 
     EnemyType enemyType = map.enemyTypes[index];
 

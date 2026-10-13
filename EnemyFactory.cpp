@@ -6,6 +6,8 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
     switch (type)
     {
+	// 敵の種類に応じてデータを設定
+	// スライム
     case EnemyType::Slime:
 
         data =
@@ -18,7 +20,8 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         };
 
         break;
-
+        
+    // ゴブリン
     case EnemyType::Goblin:
 
         data =
@@ -32,8 +35,47 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
         break;
 
-    case EnemyType::Dragon:
+    // 魔女
+    case EnemyType::Witch:
 
+        data =
+        {
+            "魔女",
+            60,
+            20,
+            150,
+            100
+        };
+
+        break;
+
+         // スケルトン    
+	case EnemyType::Skeleton:
+        data =
+        {
+            "スケルトン",
+            70,
+            16,
+            110,
+            60
+        };
+		break;
+
+
+		// ゴーレム
+        case EnemyType::Golem:
+        data =
+        {
+            "ゴーレム",
+            80,
+            18,
+            120,
+            80
+		};
+        		break;
+
+		// ドラゴン
+        case EnemyType::Dragon:
         data =
         {
             "ドラゴン",
@@ -41,9 +83,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
             20,
             150,
             100
-        };
-
-        break;
+		};
 
     default: data =
     {
