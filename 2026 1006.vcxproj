@@ -128,7 +128,10 @@
     <ClCompile Include="EnemyData.cpp" />
     <ClCompile Include="EnemyFactory.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameModel.cpp" />
+    <ClCompile Include="GameView.cpp" />
     <ClCompile Include="MapData.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -138,8 +141,11 @@
     <ClInclude Include="EnemyData.h" />
     <ClInclude Include="EnemyFactory.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameController.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameModel.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="GameView.h" />
     <ClInclude Include="MapData.h" />
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="Player.h" />
