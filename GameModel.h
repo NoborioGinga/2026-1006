@@ -3,14 +3,13 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "ObjectPool.h"
-#include "MapData.h"
 
 class GameModel
 {
 public:
     GameModel();
 
-    // ゲーム状態の取得
+    // ゲーム状態取得
     Player& GetPlayer();
     const Player& GetPlayer() const;
     Enemy* GetCurrentEnemy() const;
@@ -18,7 +17,7 @@ public:
     int GetDefeatedOnMap() const;
     ObjectPool& GetEnemyPool();
 
-    // ゲーム状態の更新
+    // ゲーム状態更新
     void SetCurrentEnemy(Enemy* enemy);
     void SetCurrentMap(int map);
     void SetDefeatedOnMap(int count);

@@ -1,5 +1,6 @@
 #include "GameController.h"
 #include "EnemyFactory.h"
+#include "GameManager.h"
 #include "MapData.h"
 #include <iostream>
 #include <cstdlib>
@@ -97,7 +98,6 @@ void GameController::HandleBattle()
             model.HandleEnemyDefeated(expGain, goldGain);
             view.DisplayEnemyDefeated(model.GetCurrentEnemy()->GetName(), expGain, goldGain);
 
-            // レベルアップ判定
             if (model.GetPlayer().IsLeveledUp())
             {
                 view.DisplayLevelUp(model.GetPlayer());
@@ -163,7 +163,6 @@ void GameController::HandleMapClear()
 
     model.GetPlayer().AddExp(150);
 
-    // レベルアップ判定
     if (model.GetPlayer().IsLeveledUp())
     {
         view.DisplayLevelUp(model.GetPlayer());
