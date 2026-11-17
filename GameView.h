@@ -12,6 +12,7 @@ public:
 
     // タイトル画面表示
     void DisplayTitle() const;
+    void DisplayTitleInput() const;
     void DisplayTitleMenu() const;
 
     // バトル画面表示

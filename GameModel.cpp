@@ -100,9 +100,9 @@ void GameModel::ExecuteEnemyAttack(int& outDamage)
 }
 
 // プレイヤー回復実行
-void GameModel::ExecutePlayerHeal(int healAmount)
+void GameModel::ExecutePlayerHeal()
 {
-    player.Heal(healAmount);
+    player.Heal();
 }
 
 // 敵撃破処理

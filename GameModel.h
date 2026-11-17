@@ -27,7 +27,7 @@ public:
     // バトルロジック
     void ExecutePlayerAttack(int& outDamage);
     void ExecuteEnemyAttack(int& outDamage);
-    void ExecutePlayerHeal(int healAmount);
+    void ExecutePlayerHeal();
     void HandleEnemyDefeated(int& outExp, int& outGold);
 
 private:

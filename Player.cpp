@@ -37,10 +37,10 @@ void Player::TakeDamage(int damage)
 // ============================================================
 // HP 回復（回復薬使用時）
 // ============================================================
-void Player::Heal(int amount)
+void Player::Heal()
 {
     // 回復量分 HP を増加
-    hp += amount;
+    hp += maxHp/4;
 
     // HP が最大値を超えないようにクランプ
     if (hp > maxHp)

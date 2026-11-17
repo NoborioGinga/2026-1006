@@ -43,11 +43,10 @@ void GameController::Run()
 void GameController::HandleTitle()
 {
     view.DisplayTitle();
-    view.DisplayTitleMenu();
-
+    view.DisplayTitleInput();
 
     int command = GetUserInput();
-
+    
     if (command == 1)
     {
         model.ResetGameState();
@@ -62,6 +61,7 @@ void GameController::HandleTitle()
     {
         GameManager::GetInstance().SetState(GameState::Exit);
     }
+
 }
 
 void GameController::HandleBattle()
@@ -125,7 +125,7 @@ void GameController::HandleBattle()
     }
     else if (command == 2)
     {
-        model.ExecutePlayerHeal(20);
+        model.ExecutePlayerHeal();
         view.DisplayPlayerHealed(20);
     }
     else if (command == 3)

@@ -9,7 +9,7 @@ public:
     // 攻撃・ダメージ処理
     void Attack();
     void TakeDamage(int damage);
-    void Heal(int amount);
+    void Heal();
 
     // EXP・ゴールド管理
     void AddExp(int amount);

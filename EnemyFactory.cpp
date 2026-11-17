@@ -12,7 +12,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
         data =
         {
-            "スライム",
+            "スライム　",
             30,
             8,
             50,
@@ -26,7 +26,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
         data =
         {
-            "ゴブリン",
+            "ゴブリン　",
             50,
             12,
             70,
@@ -40,7 +40,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
         data =
         {
-            "魔女",
+            "魔女　　　",
             60,
             20,
             150,
@@ -66,7 +66,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         case EnemyType::Golem:
         data =
         {
-            "ゴーレム",
+            "ゴーレム　",
             80,
             18,
             120,
@@ -78,9 +78,9 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
         case EnemyType::Dragon:
         data =
         {
-            "ドラゴン",
+            "ドラゴン　",
             100,
-            20,
+            30,
             150,
             100
 		};
@@ -88,7 +88,7 @@ void EnemyFactory::CreateEnemy(Enemy& enemy, EnemyType type)
 
     default: data =
     {
-        "スライム",
+        "スライム　",
         30,
         8,
         50,

@@ -14,12 +14,12 @@ void GameView::DisplayHeader(const char* title) const
 void GameView::DisplayPlayerStatus(const Player& player) const
 {
     std::cout << "プレイヤー レベル : " << player.GetLevel() << std::endl;
-    std::cout << "プレイヤー HP : " << player.GetHP() << " / "
+    std::cout << "プレイヤー HP     : " << player.GetHP() << " / "
               << player.GetMaxHP() << std::endl;
-    std::cout << "攻撃力 : " << player.GetAttack() << std::endl;
-    std::cout << "EXP : " << player.GetExp() << " / "
+    std::cout << "攻撃力            : " << player.GetAttack() << std::endl;
+    std::cout << "EXP               : " << player.GetExp() << " / "
               << player.GetNextLevelExp() << std::endl;
-    std::cout << "ゴールド : " << player.GetGold() << std::endl;
+    std::cout << "ゴールド          : " << player.GetGold() << std::endl;
 }
 
 // 敵のステータスを表示
@@ -27,7 +27,8 @@ void GameView::DisplayEnemyStatus(const Enemy* enemy) const
 {
     if (enemy != nullptr)
     {
-        std::cout << enemy->GetName() << " HP : " << enemy->GetHP()
+       
+        std::cout << enemy->GetName() << " HP     : " << enemy->GetHP()
                   << " / " << enemy->GetMaxHP() << std::endl;
     }
 }
@@ -39,15 +40,18 @@ void GameView::DisplayTitle() const
 }
 
 // タイトルメニューを表示
-void GameView::DisplayTitleMenu() const
+void GameView::DisplayTitleInput() const
 {
-	// << std::endl;
-    std::cout << "1. ゲーム開始" << std::endl;
-    std::cout << "2. 終了" << std::endl;
-    std::cout << "番号を入力してください";
+    std::cout << "1 ー ゲーム開始" << std::endl;
+    std::cout << "2 ー 終了" << std::endl;
+    std::cout << "↑ 番号を入力してください" << std::endl;
 }
 
-
+void GameView::DisplayTitleMenu() const
+{
+    std::cout << "1. ゲーム開始" << std::endl;
+    std::cout << "2. 終了" << std::endl;
+}
 
 // バトル画面を表示
 void GameView::DisplayBattle(const MapData& map, int defeatedOnMap,
@@ -57,9 +61,10 @@ void GameView::DisplayBattle(const MapData& map, int defeatedOnMap,
     std::cout << "現在のマップ：" << map.name << std::endl;
     std::cout << "討伐数：" << defeatedOnMap << " / " << map.enemyCount << std::endl;
 	std::cout << std::endl;
-    std::cout <<"----ステータス-----"<< std::endl;
+    std::cout <<"---- プレイヤー -----"<< std::endl;
     DisplayPlayerStatus(player);
     std::cout << std::endl;
+    std::cout <<"---- 敵 -----"<< std::endl;
     DisplayEnemyStatus(enemy);
 }
 
@@ -100,6 +105,8 @@ void GameView::DisplayEnemyAttackResult(int damage) const
 // 回復処理を表示
 void GameView::DisplayPlayerHealed(int healAmount) const
 {
+    std::cout << std::endl;
+    std::cout << "----------  ログ  ----------" << std::endl;
     std::cout << "薬草を使った！" << std::endl;
     std::cout << "HPが" << healAmount << "回復した！" << std::endl;
 }
@@ -107,6 +114,8 @@ void GameView::DisplayPlayerHealed(int healAmount) const
 // 逃げた事を表示
 void GameView::DisplayEscapeBattle() const
 {
+    std::cout << std::endl;
+    std::cout << "----------  ログ  ----------" << std::endl;
     std::cout << "戦闘から逃げた！" << std::endl;
 }
 
@@ -120,7 +129,9 @@ void GameView::DisplayInvalidInput() const
 void GameView::DisplayLevelUp(const Player& player) const
 {
     std::cout << std::endl;
+    std::cout << "!!!!!!!!!!!!!!!!!!!" << std::endl;
     std::cout << " レベルアップ！" << std::endl;
+    std::cout << "!!!!!!!!!!!!!!!!!!!" << std::endl;
     std::cout << "レベル：" << player.GetLevel() << std::endl;
     std::cout << "最大 HP が 7 上昇！" << std::endl;
     std::cout << "攻撃力が 2 上昇！" << std::endl;
