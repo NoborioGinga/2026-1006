@@ -41,10 +41,13 @@ void GameView::DisplayTitle() const
 // タイトルメニューを表示
 void GameView::DisplayTitleMenu() const
 {
+	// << std::endl;
     std::cout << "1. ゲーム開始" << std::endl;
     std::cout << "2. 終了" << std::endl;
-    std::cout << "番号を入力してください：";
+    std::cout << "番号を入力してください";
 }
+
+
 
 // バトル画面を表示
 void GameView::DisplayBattle(const MapData& map, int defeatedOnMap,
@@ -53,7 +56,8 @@ void GameView::DisplayBattle(const MapData& map, int defeatedOnMap,
     DisplayHeader("            戦闘              ");
     std::cout << "現在のマップ：" << map.name << std::endl;
     std::cout << "討伐数：" << defeatedOnMap << " / " << map.enemyCount << std::endl;
-    std::cout << std::endl;
+	std::cout << std::endl;
+    std::cout <<"----ステータス-----"<< std::endl;
     DisplayPlayerStatus(player);
     std::cout << std::endl;
     DisplayEnemyStatus(enemy);
@@ -72,6 +76,9 @@ void GameView::DisplayBattleMenu() const
 // プレイヤーの攻撃結果を表示
 void GameView::DisplayPlayerAttackResult(const char* enemyName, int damage) const
 {
+	std::cout << std::endl;
+    std::cout << "----------  ログ  ----------" << std::endl;
+
     std::cout << enemyName << "に " << damage << " ダメージ！" << std::endl;
 }
 

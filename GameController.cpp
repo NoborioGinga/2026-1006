@@ -45,6 +45,7 @@ void GameController::HandleTitle()
     view.DisplayTitle();
     view.DisplayTitleMenu();
 
+
     int command = GetUserInput();
 
     if (command == 1)
